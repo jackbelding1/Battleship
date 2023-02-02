@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191917">
+
+    <Button
+        android:id="@+id/create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Login"
+        android:layout_centerHorizontal="true"
+        android:onClick="onCreateAccountButton"
+        android:text="@string/create_account"
+        android:textColor="#0E0E0E"
+        app:backgroundTint="#F4EFEF" />
+
+    <Button
+        android:id="@+id/Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rememberCheckBox"
+        android:layout_alignStart="@id/create_account"
+        android:layout_alignEnd="@id/create_account"
+        android:layout_alignParentEnd="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:onClick="onLoginButton"
+        android:text="@string/Login"
+        android:textColor="#000000"
+        app:backgroundTint="#F1EDED" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/password"
+        android:textAlignment="center">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/userLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/enter_username"
+            android:password="false"
+            android:textAlignment="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/center_frame"
+        android:gravity="center">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:hint="@string/enter_password"
+            android:password="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/clientResponse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:gravity="center"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:textColor="#F44336" />
+
+    <FrameLayout
+        android:id="@+id/center_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+    </FrameLayout>
+
+    <CheckBox
+        android:id="@+id/rememberCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/clientResponse"
+        android:text="@string/remember_me"
+        android:textColor="#78909C" />
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center|top"
+    tools:context=".SetupActivity">
+
+    <TextView
+        android:id="@+id/setupName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center_horizontal"
+        android:text="@string/setup_player"
+        android:textSize="20sp" />
+
+    <view
+        android:id="@+id/setUpView"
+        class="edu.msu.team9.proj1.SetupView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/textView"
+        android:layout_centerInParent="true"
+        android:onClick="onStartGame"
+        android:text="@string/button_done_text"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/setUpView"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/setupMessage" />
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#673AB7">
+
+    <TextView
+        android:id="@+id/after_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0E0E0E"
+        android:text="@string/after_login_title"
+        android:textAlignment="center"
+        android:textColor="#F6F2F2"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/current_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/after_title"
+        android:background="#0E0E0E"
+        android:text="@string/logged_in_as"
+        android:textAlignment="center"
+        android:textColor="#F6F2F2"
+        android:textSize="20sp" />
+
+    <FrameLayout
+        android:id="@+id/center_line"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:textAlignment="center">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/current_user"
+        android:layout_alignEnd="@id/center_line"
+        android:background="#2196F3">
+
+        <ListView
+            android:id="@+id/listGames"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/button_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/current_user"
+        android:layout_alignStart="@id/center_line">
+
+        <Button
+            android:id="@+id/create_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="onCreateGame"
+            android:text="@string/create_game"
+            app:backgroundTint="#0B0A0A" />
+    </FrameLayout>
+</RelativeLayout>

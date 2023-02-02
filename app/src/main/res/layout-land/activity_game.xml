@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gameView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity"
+    android:orientation="horizontal">
+
+    <view
+        android:id="@+id/setupViewP"
+        class="edu.msu.team9.proj1.GameView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/instructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="@string/attack_text" />
+
+        <Button
+            android:id="@+id/turnDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/instructions"
+            android:layout_alignStart="@id/surrender"
+            android:layout_alignEnd="@id/surrender"
+            android:layout_centerHorizontal="true"
+            android:onClick="onDone"
+            android:text="@string/turn_done" />
+
+        <Button
+            android:id="@+id/surrender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/turnDone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:minWidth="32dp"
+            android:minHeight="48dp"
+            android:onClick="onSurrender"
+            android:text="@string/surrenderButton" />
+
+        <TextView
+            android:id="@+id/player_move_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/instructions"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="@string/player_move"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    tools:context=".SetupActivity">
+
+    <view
+        android:id="@+id/setUpView"
+        class="edu.msu.team9.proj1.SetupView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+
+        <TextView
+            android:id="@+id/setupName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/textWelcome"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/setup_player"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/textWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/setupMessage" />
+
+        <Button
+            android:id="@+id/doneButtonLand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textWelcome"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="true"
+            android:onClick="onStartGame"
+            android:text="@string/button_done_text"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/top_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#ECE4E4">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="#ECE4E4">
+
+        <RelativeLayout
+            android:id="@+id/relative_center_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/button_holder2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_holder">
+
+                <Button
+                    android:id="@+id/howToPlay2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:onClick="onHowToPlaySelected"
+                    android:text="@string/menu_play"
+                    app:backgroundTint="#0C0808" />
+            </FrameLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_main_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/input_main_2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_main_text_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F1EDF6"
+                    android:gravity="center"
+                    android:hint="@string/input_player1"
+                    android:textColor="#131313" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <FrameLayout
+                android:id="@+id/anchor_frame"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignWithParentIfMissing="false"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="false"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="-20dp"
+                android:foregroundGravity="center">
+
+            </FrameLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_main_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/anchor_frame"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_main_text_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F1EDF6"
+                    android:gravity="center"
+                    android:hint="@string/input_player2"
+                    android:textColor="#131313" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <FrameLayout
+                android:id="@+id/button_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/anchor_frame">
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="onSetUpGame"
+                    android:text="@string/button_main_text"
+                    app:backgroundTint="#0C0808" />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#ECE4E4"/>
+</LinearLayout>
